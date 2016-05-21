@@ -135,7 +135,7 @@ void readxml(char* filename)
         if( filenamepos != string::npos )
         {
             string filename = linebuf.substr( filenamepos + 10, linebuf.find("</filename>") - filenamepos - 10 );
-            thisxmlfile.path = pathhead + databasepath + "/" + filename + ".JPGE";
+            thisxmlfile.path = pathhead + databasepath + "/" + filename + ".JPEG";
         }
         
         if( xminpos != string::npos )
@@ -174,7 +174,7 @@ void writetxt(void)
     vector<xmlfile>::iterator it;
     for( it = txtfile.begin(); it != txtfile.end(); it++ )
     {
-        out << it->path << " " << it->type << " " << it->xmin << " " << it->xmax << " " << it->ymin << " " << it->ymax << endl;
+        out << it->path << " " << it->type << " " << it->xmin << " " << it->ymin << " " << it->xmax << " " << it->ymax << endl;
     }
     
     out.close();
